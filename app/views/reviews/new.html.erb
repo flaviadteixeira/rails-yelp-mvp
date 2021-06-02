@@ -1,0 +1,10 @@
+<h1 style="text-align: center"> Creating a review for <%= @restaurant.name %> </h1>
+
+<div class="container col-6" style="margin-top: 50px">
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <br>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
